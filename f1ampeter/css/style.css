@@ -1,0 +1,513 @@
+h1, h2, h3, p, a, marquee, td{
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*HEADER*/
+header{
+    /*position: fixed;*/
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#banner-imga{
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+#banner-enlaces{
+    display: flex;
+}
+#banner-enlaces > a{
+    display: flex;
+    padding: 2rem 1rem;
+    transition: all .5s ease;
+}
+#banner-enlaces a:hover{
+    background-color: red;
+}
+.hashtag > a{
+    display: flex;
+    padding: 2rem;
+    transition: all .5s ease;
+}
+.hashtag > a:hover{
+    background-color: red;
+}
+@media (max-width: 800px) {
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    #banner-imga{
+        flex-direction: column;
+    }
+    #banner-enlaces{
+        display: none;
+    }
+    .hashtag{
+        width: 100%;
+    }
+    .hashtag > a{
+        display: flex;
+        justify-content: center;
+        padding: .5rem;
+    }
+}
+/*NOVEDADES*/
+#novedades{
+    background-color: red;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .3rem;
+    font-size: 1.5rem;
+}
+#novedades div:nth-child(1){
+width: 80%;
+}
+#novedades div:nth-child(2){
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+}
+#novedades div:nth-child(2) > a{
+    max-width: 100%;
+}
+@media (max-width: 1030px) {
+    #novedades{
+        flex-direction: column;
+    }
+}
+/*BANNER*/
+#banner{
+    background: url(../img/banner.png); /*Imagen fondo BANNER*/
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+#banner div:nth-child(1){
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20rem;
+}
+#banner div:nth-child(2){
+    width: 30%;
+    margin-top: 10rem;
+    text-align: center;
+    color: white;
+}
+.banner-enlace{
+    background-color: red;
+    padding: 1.5rem 2rem;
+    color: white;
+}
+.banner-enlace:hover{
+    background-color: white;
+    color: black;
+}
+#banner div:nth-child(2) a:nth-child(1){
+    color: #A970FF;
+    font-weight: 900;
+    font-size: 1.3rem;
+    transition: all .3s ease-in;
+}
+#banner div:nth-child(2) a:nth-child(2){
+    color: red;
+    font-size: 1.3rem;
+    transition: all .3s ease-in;
+}
+#banner div:nth-child(2) a:hover{
+    color: white;
+}
+@media screen and (max-width: 768px) {
+    #banner{
+        height: 74vh;
+    }
+    #banner div:nth-child(2){
+        width: 100%;
+    }
+    #banner div:nth-child(1){
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 15rem;
+    }
+    #banner div:nth-child(1) > a{
+        width: 40%;
+    }
+    #banner div:nth-child(1) > a:nth-child(1){
+        width: 40%;
+        margin: 0rem 0 1rem;
+    }
+    #banner > div:nth-child(2) > p{
+        margin-top: 5rem;
+    }
+    #banner > div:nth-child(2){
+        margin-top: 1rem;
+    }
+    .banner-enlace:nth-child(1){
+        font-size: 1rem;
+        padding: 1rem 1rem;
+    }
+    .banner-enlace:nth-child(2){
+        font-size: 1rem;
+        padding: .5rem 1rem;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1350px){
+    #banner div:nth-child(2){
+        width: 40%;
+    }
+    #banner div:nth-child(1){
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 40%;
+    }
+    #banner div:nth-child(1) > a{
+        width: 20%;
+    }
+}
+/*CLASIFICACION PILOTOS*/
+#clasificacion{
+    background: url(../img/bg-clasificacion.jpg); /*Imagen fondo CLASIFICACION*/
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.bg{
+    backdrop-filter: blur(3px);
+    padding: 2rem;
+}
+#clasificacion > div > div > h2{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
+    padding: 4rem;
+}
+#pilotos{
+    display: flex;
+    overflow-y: hidden;
+    margin: auto;
+    width: 70%;
+}
+#pilotos img{
+    width: 25%;    
+    margin: 1rem;
+}
+@media screen and (min-width: 420px) and (max-width: 1350px){
+    #pilotos > img{
+        width: 55%;
+    }
+}
+@media (max-width: 480px){
+    #pilotos > img{
+        width: 100%;
+    }
+}
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+    background-color: rgb(105, 105, 105);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background-color: rgb(255, 1, 1);
+}
+
+/*ESCUDERIAS*/
+#escuderias{
+    padding-top: 2rem;
+}
+#escuderias > div > h2{
+    padding: 4rem;
+    font-weight: 900;
+}
+#escuderias div:nth-child(1){
+    text-align: center;
+    color: white;
+}
+#escuderias div:nth-child(1) h2{
+    font-size: 2rem;
+}
+#escuderias div:nth-child(2){
+    width: 45%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.escuderia-img{
+    width: 17%;
+}
+
+@media screen and (max-width: 1350px){
+    #escuderias > div:nth-child(2){
+        width: 80%;
+    }
+}
+@media screen and (max-width: 480px){
+    #escuderias > div:nth-child(2){
+        width: 100%;
+    }
+    #escuderias > div:nth-child(2) > img{
+        width: 25%;
+    }
+}
+/*JEFES DE EQUIPO*/
+#jefes{
+    background: url(../img/bg-f1-jefes.jpg); /*Imagen fondo JEFES DE EQUIPO*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+#jefes h2{
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 4rem;
+}
+#jefesGaleria{
+    display: flex;
+    width: 1250px;
+    height: 500px;
+    max-width: 100%;
+}
+#jefesGaleria img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+#jefesGaleria > img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+/*CIRCUITOS*/
+#circuitos{
+    background: url(../img/bg-circuitos.jpg); /*Imagen fondo CIRCUITOS*/
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0 5rem;
+    text-align: center;
+    max-width: 100%;
+}
+#circuitos > div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+}
+#circuitos > h2{
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
+    margin: 5rem;
+}
+/*ADVERTENCIAS*/
+#adv{
+    background: url(../img/MF1_2.jpg); /*Imagen fondo ADVERTENCIAS*/
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+#adv-d{
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+#adv-d > h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 4rem;
+}
+#adv-d > img{
+    width: 50%;
+    max-width: 100%;
+}
+#adv-d > iframe{
+    margin: auto;
+    padding-bottom: 4rem;
+}
+@media screen and (max-width: 480px){
+    #adv > img{
+        width: 80%;
+    }
+}
+
+/*NORMATIVA*/
+#normativa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*derecha*/
+.norm-img-der{
+    display: flex;
+    align-items: center;
+    background: url(../img/bg-f1-jefes.jpg);
+    background-size: cover;
+    color: white;
+}
+.norm-img-der > div:nth-child(1){
+    width: 50%;
+}
+.norm-img-der > div:nth-child(1) > img{
+    max-width: 100%;
+}
+.norm-img-der > div:nth-child(2){
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+.norm-img-der > div:nth-child(2) > h3{
+    text-align: center;
+    font-weight: 900;
+    width: 80%;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.norm-img-der > div:nth-child(2) > p{
+    width: 80%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/*izquierda*/
+b{
+    font-weight: 600;
+}
+.norm-img-iz{
+    display: flex;
+    align-items: center;
+    background: url(../img/bg-f1-jefes.jpg);
+    background-size: cover;
+    color: white;
+}
+.norm-img-iz > div:nth-child(2){
+    width: 50%;
+}
+.norm-img-iz > div:nth-child(2) > img{
+    max-width: 100%;
+}
+.norm-img-iz > div:nth-child(1){
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    
+}
+.norm-img-iz > div:nth-child(1) > h3{
+    text-align: center;
+    font-weight: 900;
+    width: 80%;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.norm-img-iz > div:nth-child(1) > p{
+    width: 80%;
+    font-size: 1.5rem;
+
+}
+.norm-img-iz > div:nth-child(1) > div{
+    font-size: 1.5rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 0.5rem;
+}
+
+@media screen and (max-width: 1350px){
+    .norm-img-der{
+        flex-direction: column-reverse;
+    }
+    .norm-img-der > div:nth-child(1){
+        width: 100%;
+    }
+    .norm-img-der > div:nth-child(1) > img{
+        max-width: 100%;
+    }
+    .norm-img-der > div:nth-child(2){
+        padding: 3rem;
+        width: 100%;
+    }
+    .norm-img-iz{
+        flex-direction: column;
+    }
+    .norm-img-iz > div:nth-child(2){
+        width: 100%;
+    }
+    .norm-img-iz > div:nth-child(2) > img{
+        max-width: 100%;
+    }
+    .norm-img-iz > div:nth-child(1){
+        padding: 3rem;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 480px){
+
+}
+/*FOOTER*/
+footer{
+    background: url(../img/meta-footer.jpg);
+    padding: 2rem;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer > div:nth-child(1){
+    margin-bottom: 1rem;
+}
+footer > div:nth-child(2){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer > div > a{
+    margin: 0 2rem;
+}
+
